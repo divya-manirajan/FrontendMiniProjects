@@ -11,7 +11,7 @@ export default function Home(){
       <Link className="bg-blue-200 w-fit p-2 m-2" href={'/ToDo'}>ToDo</Link>
       <Link className="bg-blue-200 w-fit p-2 m-2" href={'/MultiVariableForm'}>MultiVariableForm</ Link>
       <Link className="bg-blue-200 w-fit p-2 m-2" href={'/ConditionalRendering'}>ConditionalRendering</ Link>
-      <Link className="bg-blue-200 w-fit p-2 m-2" href={'/BalatroUI'}>BalatroUi</Link>
+      <Link className="bg-blue-200 w-fit p-2 m-2" href={'/BalatroUI'}>BalatroUI</Link>
     </div>
   </>)
 }

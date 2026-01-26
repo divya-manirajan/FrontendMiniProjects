@@ -8,11 +8,12 @@ export default function Home(){
       <Link className="bg-blue-200 w-48 h-14 p-2 m-2 flex justify-center items-center hover:cursor-pointer hover:shadow-xl" href={'/MultiVariableForm'}>MultiVariableForm</ Link>
       <Link className="bg-blue-200 w-48 h-14 p-2 m-2 flex justify-center items-center hover:cursor-pointer hover:shadow-xl" href={'/ConditionalRendering'}>ConditionalRendering</ Link>
       <Link className="bg-blue-200 w-48 h-14 p-2 m-2 flex justify-center items-center hover:cursor-pointer hover:shadow-xl" href={'/BalatroUI'}>BalatroUI</Link>
+      <Link className="bg-blue-200 w-48 h-14 p-2 m-2 flex justify-center items-center hover:cursor-pointer hover:shadow-xl" href={'/LocalStorage'}>LocalStorage</Link>
     </div>
 
     <div className="text-center mt-10">
       <h1>List of upcoming projects:</h1>
-      <h1>1. Set up some local storage with JSON and create a "full stack" project</h1>
+      <h1>1. Create a "full stack" project with local storage</h1>
       <h1>2. Connect to a database - SQLLite</h1>
     </div>
     

@@ -46,6 +46,10 @@ export default function page(){
     }
 
     useEffect(() => {
+        console.log("users: ", users)
+    }, [])
+
+    useEffect(() => {
         localStorage.setItem("users", JSON.stringify(users))
         console.log("Local Storage: ", localStorage.getItem("users"))
     }, [users])
@@ -53,7 +57,6 @@ export default function page(){
     return (
         <div className="h-screen w-screen bg-gray-200 flex justify-center items-center">
             <form className="h-fit w-80 bg-white flex flex-col items-center p-10" onSubmit={handleSubmit}>
-                {/* FName, LName, Email, Phone, Message */}
                 <input 
                     className="placeholder-white bg-gray-700 h-fit text-2xl text-white p-2 rounded-xl" 
                     placeholder="First Name: "

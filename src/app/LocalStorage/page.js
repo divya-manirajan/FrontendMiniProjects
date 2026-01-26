@@ -9,14 +9,25 @@ export default function page(){
         Email: ""
     })
 
-    const [users, setUsers] = useState(() => {
-        try{
+    const [users, setUsers] = useState([])   
+
+    useEffect(() => {
+        try {
             const savedUsers = localStorage.getItem("users")
-            return savedUsers ? JSON.parse(savedUsers) : ""
-        } catch (error){
-            console.log("Error: ", error)
-        }    
-    })
+            if (savedUsers){
+                setUsers(JSON.parse(savedUsers))
+            }
+        } catch (e) {
+            console.log(e)
+            setUsers([])
+        }
+    }, [])
+
+    useEffect(() => {
+        localStorage.setItem("users", JSON.stringify(users))
+        console.log("Users: ", users)
+        console.log("Local Storage: ", localStorage.getItem("users"))
+    }, [users])
 
     function handleChange(e){
         setFormData(prev => ({
@@ -44,15 +55,6 @@ export default function page(){
         localStorage.clear()
         setUsers([])
     }
-
-    useEffect(() => {
-        console.log("users: ", users)
-    }, [])
-
-    useEffect(() => {
-        localStorage.setItem("users", JSON.stringify(users))
-        console.log("Local Storage: ", localStorage.getItem("users"))
-    }, [users])
 
     return (
         <div className="h-screen w-screen bg-gray-200 flex justify-center items-center">

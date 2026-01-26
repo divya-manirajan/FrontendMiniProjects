@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react"
 
 
-export default function Test() {
+export default function page() {
 
   const [fullName, setFullName] = useState({
     fName: "",

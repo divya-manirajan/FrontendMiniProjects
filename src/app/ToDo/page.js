@@ -2,7 +2,7 @@
 import { useState } from "react";
 import ToDoItem from "../components/ToDoItem";
 
-export default function Home() {
+export default function page() {
 
   const [task, setTask] = useState("")
   const [toDos, setToDos] = useState([])

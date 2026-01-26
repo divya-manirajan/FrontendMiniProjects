@@ -1,13 +1,30 @@
-import BalatroBanner from "./BalatroBanner";
+'use client'
+
+import { useEffect, useState } from "react"
 
 export default function page() {
+
+    const [test, setTest] = useState(null)
+
+    useEffect(() => {
+        try{
+            localStorage.setItem("test", "Test Local Storage")
+            setTest(localStorage.getItem("test"))
+        } catch (e){
+            console.log(e)
+        }
+    }, [])
+
+
+
   return (
-    <>
-        <div id="full-screen" className="flex flex-row bg-[url(/bg-greenPokerTable.jpg)] bg-no-repeat bg-cover w-screen h-screen overflow-hidden">
-            <div id="banner-component" className="bg-gray-700 ml-20 w-[270px] h-full p-1">
-                <BalatroBanner />
-            </div>
-        </div>
-    </>
+    <div>
+
+        <button>click me</button>
+
+        {test}
+
+      
+    </div>
   )
 }

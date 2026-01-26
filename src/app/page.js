@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export default function Home(){
+export default function page(){
   return(
   <div className="h-screen w-screen bg-green-100 p-10 flex flex-col items-center">
     <div className="grid grid-cols-2 place-items-center w-120">

@@ -1,6 +1,6 @@
 import BalatroBanner from "../components/BalatroBanner";
 
-export default function Page(){
+export default function page(){
     return (
         <>
             <div id="full-screen" className="flex flex-row bg-[url(/bg-greenPokerTable.jpg)] bg-no-repeat bg-cover w-screen h-screen">

@@ -16,6 +16,8 @@ export default function page(){
     <div className="text-center mt-10">
       <h1>List of upcoming projects:</h1>
       <h1>1. Create a "full stack" project with local storage and components</h1>
+      <li>local storage keeps track of login email</li>
+      <li>Gallery only displays events created by user</li>
       <h1>2. Connect to a database - SQLLite</h1>
     </div>
     

@@ -2,21 +2,15 @@
 
 import { useEffect, useState } from "react"
 
-export default function AddEvent() {
+export default function AddEvent({ setIsLoggedIn, setView }) {
 
     const [formData, setFormData] = useState({
         eventName: "",
         location: ""
     })
-    const [events, setEvents] = useState([])
-
-    //Set events with local Storage
-    useEffect(() => {
-        const savedEvents = localStorage.getItem("events")
-        if (savedEvents){
-            setEvents(JSON.parse(savedEvents))
-        }
-    }, [])
+    const [events, setEvents] = useState(() => {
+        return JSON.parse(localStorage.getItem("events"))
+    })
 
     function handleChange(e){
         setFormData(prev => ({
@@ -53,10 +47,11 @@ export default function AddEvent() {
         console.log("Saved Events", localStorage.getItem("events"))
     }, [events])
 
-  
-
   return (
     <div className="h-screen w-screen bg-gray-200 flex justify-center items-center flex flex-col">
+        <button className="bg-blue-200 p-2 " onClick={() => {setIsLoggedIn(false)}}>Log Out</button>
+        <button className="bg-green-200 p-2" onClick={() => {setView("Gallery")}}>Gallery</button>
+    
         <form className="h-fit w-160 bg-white flex flex-col items-center p-10" onSubmit={handleSubmit}>
             <input 
                 className="placeholder-white bg-gray-700 h-fit w-full text-2xl text-white p-2 mt-2 rounded-xl" 

@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useState } from "react"
+import { useState } from "react"
 
 export default function AddEvent({ setIsLoggedIn, setView }) {
 
@@ -8,9 +8,10 @@ export default function AddEvent({ setIsLoggedIn, setView }) {
         eventName: "",
         location: ""
     })
-    const [events, setEvents] = useState(() => {
-        return JSON.parse(localStorage.getItem("events"))
-    })
+    
+    const [events, setEvents] = useState([])
+ 
+
 
     function handleChange(e){
         setFormData(prev => ({
@@ -33,19 +34,9 @@ export default function AddEvent({ setIsLoggedIn, setView }) {
     }
 
     function handleClear(){
-        localStorage.clear()
         setEvents([])
-        setFormData({
-                eventName: "",
-                location: ""
-            })
     }
 
-    //Set and log saved Events
-    useEffect(() => {
-        localStorage.setItem("events", JSON.stringify(events))
-        console.log("Saved Events", localStorage.getItem("events"))
-    }, [events])
 
   return (
     <div className="h-screen w-screen bg-gray-200 flex justify-center items-center flex flex-col">
@@ -76,9 +67,11 @@ export default function AddEvent({ setIsLoggedIn, setView }) {
         <div className="flex flex-col">
             <h1>LIST:</h1>
             <ul>
-                {events.map((item, index) => (
+                {events ? events.map((item, index) => (
                     <li key={index}>{item.eventName} at {item.location}</li>
-                ))}
+                )) : (
+                    <p></p>
+                )}
             </ul>
     
         </div>

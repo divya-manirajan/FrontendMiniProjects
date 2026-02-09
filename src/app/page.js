@@ -10,7 +10,7 @@ export default function page(){
       <Link className="bg-blue-200 w-48 h-14 p-2 m-2 flex justify-center items-center hover:cursor-pointer hover:shadow-xl" href={'/BalatroUI'}>BalatroUI</Link>
       <Link className="bg-blue-200 w-48 h-14 p-2 m-2 flex justify-center items-center hover:cursor-pointer hover:shadow-xl" href={'/LocalStorage'}>LocalStorage</Link>
       <Link className="bg-blue-200 w-48 h-14 p-2 m-2 flex justify-center items-center hover:cursor-pointer hover:shadow-xl" href={'/EventOrganizer'}>EventOrganizer</Link>
-
+      <Link className="bg-blue-200 w-48 h-14 p-2 m-2 flex justify-center items-center hover:cursor-pointer hover:shadow-xl" href={'/WeatherApp'}>WeatherApp</Link>
     </div>
 
     <div className="text-center mt-10">

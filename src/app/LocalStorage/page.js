@@ -9,18 +9,11 @@ export default function page(){
         Email: ""
     })
 
-    const [users, setUsers] = useState([])   
+    const [users, setUsers] = useState([])
 
     useEffect(() => {
-        try {
-            const savedUsers = localStorage.getItem("users")
-            if (savedUsers){
-                setUsers(JSON.parse(savedUsers))
-            }
-        } catch (e) {
-            console.log(e)
-            setUsers([])
-        }
+        const savedUsers = localStorage.getItem('users')
+        setUsers(JSON.parse(savedUsers))
     }, [])
 
     useEffect(() => {
@@ -56,8 +49,8 @@ export default function page(){
         setUsers([])
     }
 
-    return (
-        <div className="h-screen w-screen bg-gray-200 flex justify-center items-center">
+    return (<>
+        <div className="h-screen w-screen bg-gray-200 flex flex-col justify-center items-center">
             <form className="h-fit w-80 bg-white flex flex-col items-center p-10" onSubmit={handleSubmit}>
                 <input 
                     className="placeholder-white bg-gray-700 h-fit text-2xl text-white p-2 rounded-xl" 
@@ -85,6 +78,10 @@ export default function page(){
                     <button className="bg-gray-600 p-1 rounded-xl hover:cursor-pointer hover:shadow-xl text-white" formNoValidate type="button" onClick={handleClear}>Clear Storage</button>
                 </div>
             </form>
+            {users && users.map((item, index) => (
+            <li key={index}>{item.FName} {item.LName} {item.Email}</li>
+            ))}
         </div>
-    )
+        
+    </>)
 }

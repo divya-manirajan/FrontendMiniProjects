@@ -8,19 +8,11 @@ export default function page(){
       <Link className="bg-blue-200 w-48 h-14 p-2 m-2 flex justify-center items-center hover:cursor-pointer hover:shadow-xl" href={'/MultiVariableForm'}>MultiVariableForm</ Link>
       <Link className="bg-blue-200 w-48 h-14 p-2 m-2 flex justify-center items-center hover:cursor-pointer hover:shadow-xl" href={'/ConditionalRendering'}>ConditionalRendering</ Link>
       <Link className="bg-blue-200 w-48 h-14 p-2 m-2 flex justify-center items-center hover:cursor-pointer hover:shadow-xl" href={'/BalatroUI'}>BalatroUI</Link>
-      <Link className="bg-blue-200 w-48 h-14 p-2 m-2 flex justify-center items-center hover:cursor-pointer hover:shadow-xl" href={'/LocalStorage'}>LocalStorage</Link>
+      {/* <Link className="bg-blue-200 w-48 h-14 p-2 m-2 flex justify-center items-center hover:cursor-pointer hover:shadow-xl" href={'/LocalStorage'}>LocalStorage</Link> */}
       {/* <Link className="bg-blue-200 w-48 h-14 p-2 m-2 flex justify-center items-center hover:cursor-pointer hover:shadow-xl" href={'/EventOrganizer'}>EventOrganizer</Link> */}
       <Link className="bg-blue-200 w-48 h-14 p-2 m-2 flex justify-center items-center hover:cursor-pointer hover:shadow-xl" href={'/WeatherApp'}>WeatherApp</Link>
       <Link className="bg-blue-200 w-48 h-14 p-2 m-2 flex justify-center items-center hover:cursor-pointer hover:shadow-xl" href={'/NasaApp'}>Nasa App</Link>
 
-    </div>
-
-    <div className="text-center mt-10">
-      <h1>List of upcoming projects:</h1>
-      <h1>1. Create a "full stack" project with local storage and components</h1>
-      <li>local storage keeps track of login email</li>
-      <li>Gallery only displays events created by user</li>
-      <h1>2. Connect to a database - SQLLite</h1>
     </div>
     
   </div>)
